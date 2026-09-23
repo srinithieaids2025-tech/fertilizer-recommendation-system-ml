@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Fertilizer Recommendation System</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🌱 Fertilizer Recommendation System</h1>
+
+  <p class="subtitle">
+    Enter your soil and crop conditions to get a fertilizer recommendation.
+  </p>
+
+  <div class="card">
+
+    <h2>Field Conditions</h2>
+
+    <label>Soil Type</label>
+
+    <select id="soil">
+      <option>Black</option>
+      <option>Clayey</option>
+      <option>Loamy</option>
+      <option>Red</option>
+      <option>Sandy</option>
+    </select>
+
+
+    <label>Crop Type</label>
+
+    <select id="crop">
+      <option>Wheat</option>
+      <option>Rice</option>
+      <option>Maize</option>
+      <option>Cotton</option>
+      <option>Sugarcane</option>
+    </select>
+
+
+    <label>Temperature (°C)</label>
+    <div class="number-control">
+
+  <button type="button" onclick="changeValue('temperature', -1)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="temperature"
+    value="25"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('temperature', 1)">
+    +
+  </button>
+
+</div>
+
+
+    <label>Humidity (%)</label>
+    <div class="number-control">
+
+  <button type="button" onclick="changeValue('humidity', -1)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="humidity"
+    value="50"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('humidity', 1)">
+    +
+  </button>
+
+</div>
+
+
+    <label>Moisture (%)</label>
+    <div class="number-control">
+
+  <button type="button" onclick="changeValue('moisture', -1)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="moisture"
+    value="40"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('moisture', 1)">
+    +
+  </button>
+
+</div>
+
+
+   <label>Nitrogen</label>
+
+<div class="number-control">
+
+  <button type="button" onclick="changeValue('nitrogen', -5)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="nitrogen"
+    value="30"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('nitrogen', 5)">
+    +
+  </button>
+
+</div>
+
+    <label>Potassium</label>
+
+<div class="number-control">
+
+  <button type="button" onclick="changeValue('potassium', -5)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="potassium"
+    value="10"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('potassium', 5)">
+    +
+  </button>
+
+</div>
+   <label>Phosphorous</label>
+
+<div class="number-control">
+
+  <button type="button" onclick="changeValue('phosphorous', -5)">
+    −
+  </button>
+
+  <input
+    type="number"
+    id="phosphorous"
+    value="10"
+    readonly
+  >
+
+  <button type="button" onclick="changeValue('phosphorous', 5)">
+    +
+  </button>
+
+</div>
+
+    
+    <button onclick="getRecommendation()">
+      Get Recommendation
+    </button>
+
+  </div>
+
+
+  <div id="result" class="result"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
